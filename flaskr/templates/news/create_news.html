@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename ='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename ='css/bootstrap.min.css')}}  ">
+    <script src="{{url_for('static', filename ='js/bootstrap.min.js')}}"></script>
+    <title>Đăng tin</title>
+</head>
+
+<body>
+    <header>
+
+        <nav id='header-nav' class="navbar navbar-expand-lg 2  navbar-light " style="background-color: #1E90FF;">
+            <div class="container">
+                <a id='logo' class="navbar-brand" href="{{url_for('news.index')}}">Let share</a>
+
+                <button class="navbar-toggler d-lg-2  one " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse " id="collapsibleNavId">
+                    <ul id='nav-list' class="navbar-nav  me-auto mt-2 mt-lg-2   ">
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="#">Trang cá nhân</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Quản lý tin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Đơn hàng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Chat</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Thông báo</a>
+                        </li>
+
+
+                    </ul>
+                    <form class="d-flex my-2 my-lg-2  ">
+                        <input class="form-control me-sm-5" type="text" placeholder="Tìm kiếm">
+                    </form>
+
+                    <a id="btn-login" type="button" class="btn active " href="#">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        Đăng nhập
+                    </a>
+
+                </div>
+
+
+
+            </div>
+        </nav>
+
+
+    </header>
+    <!--header-->
+
+    <div id="main" class="container mt-2">
+        <div id="tile">
+            <p>Thông tin chi tiết</p>
+        </div>
+
+        <form action="">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Tiêu đề</label>
+                <input type="text" class="form-control" id="title-product">
+                <small></small>
+            </div>
+
+            <div class="dropdown mb-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Loại sản phẩm
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="catogrical-product" id="catgorical-product1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Default radio
+                        </label>
+                      </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="catogrical-product" id="catgorical-product2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                              Default checked radio
+                            </label>
+                          </div>
+                    </li>
+                </ul>
+                <small></small>
+            </div>
+            
+            <div class="mb-3">
+                <label for="image-product" class="form-label">Chọn hình ảnh</label>
+                <input class="form-control" type="file" id="image-product">
+                <small></small>
+              </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Mô tả</label>
+                <textarea class="form-control" id="description" rows="5"></textarea>
+                <small></small>
+            </div>
+        </form>
+
+        <div>
+            <button type="submit" id="btn-submit" class="btn btn-success">Đăng bài</button>
+        </div>
+    </div>
+
+    <script src="{{url_for('static', filename ='js/createnewsscripts.js')}}"></script>
+    <script src="{{url_for('static', filename ='js/bootstrap.bundle.min.js')}}"></script>
+
+</body>
+
+</html>

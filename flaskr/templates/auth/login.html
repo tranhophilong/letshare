@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename ='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/style_login.css')}}">
+    <title>Đăng nhập</title>
+</head>
+
+<body>
+    <!-- <div class="container login-form"> -->
+    <!-- <div class="row"> -->
+    <div class="main-section container ">
+        <div class="row">
+            <div class="col-6">
+                <a href="#" class="navbar-brand" id="logo">Let Share</a>
+                <p id="slogan">Ứng dụng giúp mọi người chia sẽ đồ</p>
+
+            </div>
+            <div class="form-box col-6">
+                <p id="title">Đăng nhập</p>
+                <form action="/action_page.php">
+                    <div class="mb-3 mt-3 ">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Nhập email" name="email">
+                        <small></small>
+                    </div>
+                    <div class="mb-3 ">
+                        <label for="pwd" class="form-label">Mật khẩu:</label>
+                        <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" name="password">
+                        <small></small>
+                    </div>
+                    <!-- <div class="form-check mb-3">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                        </label>
+                    </div> -->
+                    <!-- <button type="submit" class="btn btn-primary btn-blo">Đăng nhập</button> -->
+                    <div class="d-grid gap-2 mb-3">
+                      <button type="button" id="btn-submit" class="btn btn-primary">Đăng nhập</button>
+                    </div>
+
+                    <a href="" >
+                        <p id="forgot-pwd"> Quên mật khẩu</p>
+
+                    </a>
+
+                    <div id='nav-register'class="mb-3">
+                        <p>Bạn chưa có tài khoản? <span> <a href="{{url_for('auth.signup')}}">Đăng ký</a></span></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="{{url_for('static', filename = 'js/bootstrap.bundle.min.js')}}' "></script>
+    <script src = "{{url_for('static', filename = 'js/loginscript.js')}}"></script>
+
+
+
+    <!-- </div> -->
+</body>
+
+</html>

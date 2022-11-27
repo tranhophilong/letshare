@@ -1,0 +1,79 @@
+body{
+    background-color: #F5F5F5;
+    align-content: center;
+    box-sizing: border-box;
+    /* position: relative; */
+    
+}
+
+.form-box{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 400px;
+    height: auto;
+    float: right;
+    /* position: absolute; */
+    
+}
+
+#title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.main-section{
+    margin-top: 80px;
+}
+
+
+
+#forgot-pwd{
+    text-align: center;
+}
+
+#logo{
+    font-style: italic;
+    color: #1E90FF;
+    font-size: 40px;
+    font-weight: 600;
+
+}
+
+#slogan{
+    font-weight: 600;
+    font-size: 20px;
+}
+#nav-register{
+    text-align: center;
+}
+
+.font-inter{
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+
+
+
+select{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #BEBEBE;
+}
+
+
+
+.error input{
+    border: 1px solid red;
+}
+
+.error small {
+    color: red;
+}
+
+.flash{
+    color: red;
+}

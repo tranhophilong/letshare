@@ -1,0 +1,102 @@
+body{
+    font-size: 16px;
+    background-color: white;
+
+}
+/* Start header */
+.header-nav{
+    background-color: #1E90FF rgb(30,144,255);
+}
+#logo{
+    color: white;
+    font-style: italic;
+    font-size: 30px;
+}
+
+
+#btn-post{
+    background-color: green;
+    color: white;
+    font-weight: 500;
+    width: 120px;
+    border: none;
+
+    
+
+}
+#btn-login{
+    color: white;
+    margin-left: 20px;
+}
+#nav-list a{
+    color: white;
+    font-weight: 400;
+}
+
+#nav-list a:hover{
+    color: green;
+}
+#header-nav button.navbar-toggler{
+    border: 1px solid green;
+}
+/* header end */
+/* Catgorical */
+#catgorical {
+    margin-top: 30px;
+}
+
+#catgorical  #text-title-cat p {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.categorical-element{
+    display: block;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+}
+/* catgorical end */
+
+/* post  */
+#post-new{
+    margin-top: 10px;
+}
+#text-title-post{
+    font-weight: 700;
+}
+.card-element{
+    margin-top: 20px;
+    margin-left: 10px;
+    /* background-color: #F5F5F5;  */
+}
+.card-element a{
+    text-decoration: none;
+    color: #000;
+
+}
+#card-price{
+    color: red;
+    font-weight: 600;
+}
+
+
+
+
+/* post end */
+
+
+/* .categorical-element p{
+    text-align: center;
+} */
+/* button.navbar-toggler.navbar-toggler-icon{
+    border: 1px solid green;
+} */
+
+ /* End Header */
+
+
+ /* Responsive device */
+
+ /* < */

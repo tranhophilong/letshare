@@ -1,199 +1,164 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'login_signup_base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{url_for('static', filename ='css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{url_for('static', filename = 'css/style_login.css')}}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
-    <title>Đăng ký</title>
-</head>
+{% block title %}
+ <title>Đăng ký</title>
+{% endblock %}
 
-<body>
-    <!-- <div class="container login-form"> -->
-    <!-- <div class="row"> -->
-    <div class="main-section container ">
-        <div class="row">
-            <div class="col-6">
-                <a href="#" class="navbar-brand" id="logo">Let Share</a>
-                <p id="slogan">Ứng dụng giúp mọi người chia sẽ đồ</p>
+{% block main_content %}
+<div class="main-content col-6">
+    <form >
+        <div class="container">
+            <p id="title">Đăng ký</p>
+            <div class="row">
+                <div class="mb-3 col-6 ">
+                    <input type="text" class="form-control error" placeholder="Họ" id="first-name" name="first-name" required>
+                    <small></small>
+                </div>
+                <div class="mb-3 col-6">
+                    <input type="text" class="form-control" placeholder="Tên" id="last-name" name="last-name">
+                    <small></small>
+                </div>
+                <div class="mb-3 col-12">
+                    <input type="text" class="form-control" placeholder="Số điện thoại" id="phone-number" name="phone-number">
+                    <small></small>
+                </div>
 
-            </div>
-            <div class="form-box col-6">
+                
+                <div class="mb-3 col-12">
+                    <input type="text" class="form-control" placeholder="Address" id="address"  name="email">
+                    <small></small>
+                </div>
 
-                <form action="/action_page.php" class="needs-validation"  novalidate>
-                    <div class="container">
-                        <p id="title">Đăng ký</p>
-                        <div class="row">
-                            <div class="mb-3 col-6 ">
-                                <input type="text" class="form-control error" placeholder="Họ" id="first-name" name="first-name" required>
-                                <small></small>
-                            </div>
-                            <div class="mb-3 col-6">
-                                <input type="text" class="form-control" placeholder="Tên" id="last-name" name="last-name">
-                                <small></small>
-                            </div>
-                            <div class="mb-3 col-12">
-                                <input type="text" class="form-control" placeholder="Số điện thoại" id="phone-number" name="phone-number">
-                                <small></small>
-                            </div>
-
-                            
-                            <div class="mb-3 col-12">
-                                <input type="text" class="form-control" placeholder="Address" id="address"  name="email">
-                                <small></small>
-                            </div>
-
-                            <div class="mb-3 col-12">
-                                <input type="text" class="form-control" placeholder="Email" id="email"  name="email">
-                                
-                                <small></small>
-                        
-                                
-                            </div>
+                <div class="mb-3 col-12">
+                    <input type="text" class="form-control" placeholder="Email" id="email"  name="email">
+                    
+                    <small></small>
+            
+                    
+                </div>
 
 
-                            <div class="mb-3 col-12">
-                                <input type="password" class="form-control" placeholder="Mật khẩu" id="password" name="password">
-                                <small></small>
-                            </div>
+                <div class="mb-3 col-12">
+                    <input type="password" class="form-control" placeholder="Mật khẩu" id="password" name="password">
+                    <small></small>
+                </div>
 
-                            <div class="form-floating  col-12 mb-3  row" >
-                                <p id="text-birtday" class="font-inter">Ngày sinh</p>
+                <div class="form-floating  col-12 mb-3  row" >
+                    <p id="text-birtday" class="font-inter">Ngày sinh</p>
 
-                                <div class="col-4">
-                                    <select name="birtday" id="day" required>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="14">13</option>
-                                        <option value="14">14</option>
-                                        <option value="15">15</option>
-                                        <option value="16">16</option>
-                                        <option value="17">17</option>
-                                        <option value="18">18</option>
-                                        <option value="19">19</option>
-                                        <option value="20">20</option>
-                                        <option value="21">21</option>
-                                        <option value="22">22</option>
-                                        <option value="23">23</option>
-                                        <option value="24">24</option>
-                                        <option value="25">25</option>
-                                        <option value="26">26</option>
-                                        <option value="27">27</option>
-                                        <option value="28">28</option>
-                                        <option value="29">29</option>
-                                        <option value="30">30</option>
-                                        <option value="31">31</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-4">
-                                    <select name="month" id="month" required>
-                                        <option value="1">tháng 1</option>
-                                        <option value="2">tháng 2</option>
-                                        <option value="3">tháng 3</option>
-                                        <option value="4">tháng 4</option>
-                                        <option value="5">tháng 5</option>
-                                        <option value="6">tháng 6</option>
-                                        <option value="7">tháng 7</option>
-                                        <option value="8">tháng 8</option>
-                                        <option value="9">tháng 9</option>
-                                        <option value="10">tháng 10</option>
-                                        <option value="11">tháng 11</option>
-                                        <option value="12">tháng 12</option>
-                                    </select>
-                                </div>
-
-                                <div class="col-4">
-                                    <select name="year" id="year" required>
-                                        <option value="2001">2001</option>
-                                        <option value="2002">2002</option>
-                                        <option value="2003">2003</option>
-                                        <option value="2004">2004</option>
-                                        <option value="2005">2005</option>
-                                        <option value="2006">2006</option>
-                                        <option value="2007">2007</option>
-                                        <option value="2008">2008</option>
-                                        <option value="2009">2009</option>
-                                        <option value="2010">2010</option>
-                                        <option value="2011">2011</option>
-                                        <option value="2012">2012</option>
-                                        <option value="2013">2013</option>
-                                        <option value="2014">2014</option>
-                                        <option value="2015">2015</option>
-                                        <option value="2016">2016</option>
-                                        <option value="2017">2017</option>
-                                        <option value="2018">2018</option>
-                                        <option value="2019">2019</option>
-                                        <option value="2020">2020</option>
-                                        <option value="2021">2021</option>
-
-                                    </select>
-                                </div>
-
-                            </div>
-
-                            <div class="col-12 row ms-1">
-                                <p id="text-sex" class="font-inter ps-0">Giới tính</p>
-
-                                <div class="form-check col-3  ">
-                                    <input type="radio" class="form-check-input " id="gender1" name="gender"
-                                        value="0" checked>
-                                    <label class="form-check-label" for="radio1">Nam</label>
-                                </div>
-                                <div class="form-check col-3  ">
-                                    <input type="radio" class="form-check-input " id="gender2" name="gender"
-                                        value="1">
-                                    <label class="form-check-label" for="radio2">Nữ</label>
-                                </div>
-                                <div class="form-check col-6  ">
-                                    <input type="radio" class="form-check-input " id="gender3" name="gender"
-                                        value="2">
-                                    <label class="form-check-label" for="radio3">Tùy chỉnh</label>
-                                </div>
-                            </div>
-
-
-                            <a href="#" id="btn-submit" type="submit" class="btn btn-success mt-3 mb-3 col-12">Đăng ký</a>
-
-                            <div id='nav-register'class="mb-3">
-                                <p>Bạn  có tài khoản? <span> <a href="{{url_for('auth.login')}}">Đăng nhập</a></span></p>
-                            </div>
-
-                        </div>
+                    <div class="col-4">
+                        <select name="birtday" id="day" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="14">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
                     </div>
 
-                </form>
+                    <div class="col-4">
+                        <select name="month" id="month" required>
+                            <option value="1">tháng 1</option>
+                            <option value="2">tháng 2</option>
+                            <option value="3">tháng 3</option>
+                            <option value="4">tháng 4</option>
+                            <option value="5">tháng 5</option>
+                            <option value="6">tháng 6</option>
+                            <option value="7">tháng 7</option>
+                            <option value="8">tháng 8</option>
+                            <option value="9">tháng 9</option>
+                            <option value="10">tháng 10</option>
+                            <option value="11">tháng 11</option>
+                            <option value="12">tháng 12</option>
+                        </select>
+                    </div>
+
+                    <div class="col-4">
+                        <select name="year" id="year" required>
+                            <option value="2001">2001</option>
+                            <option value="2002">2002</option>
+                            <option value="2003">2003</option>
+                            <option value="2004">2004</option>
+                            <option value="2005">2005</option>
+                            <option value="2006">2006</option>
+                            <option value="2007">2007</option>
+                            <option value="2008">2008</option>
+                            <option value="2009">2009</option>
+                            <option value="2010">2010</option>
+                            <option value="2011">2011</option>
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="col-12 row ms-1">
+                    <p id="text-sex" class="font-inter ps-0">Giới tính</p>
+
+                    <div class="form-check col-3  ">
+                        <input type="radio" class="form-check-input " id="gender1" name="gender"
+                            value="0" checked>
+                        <label class="form-check-label" for="radio1">Nam</label>
+                    </div>
+                    <div class="form-check col-3  ">
+                        <input type="radio" class="form-check-input " id="gender2" name="gender"
+                            value="1">
+                        <label class="form-check-label" for="radio2">Nữ</label>
+                    </div>
+                    <div class="form-check col-6  ">
+                        <input type="radio" class="form-check-input " id="gender3" name="gender"
+                            value="2">
+                        <label class="form-check-label" for="radio3">Tùy chỉnh</label>
+                    </div>
+                </div>
+
+
+                <p  id="btn-post-user"  class="btn btn-success mt-3 mb-3 col-12">Đăng ký </p>
+
+                <div id='nav-register'class="mb-3">
+                    <p>Bạn  có tài khoản? <span> <a href="{{url_for('auth.login')}}">Đăng nhập</a></span></p>
+                </div>
+
             </div>
         </div>
 
+    </form>
+</div>
 
-    </div>
-    
-    <div class="flash">{{ error }}</div>
-     
-
-
-    <script src="{{url_for('static', filename = 'js/signupscript.js')}}"></script>
-    <script src="{{url_for('static', filename = 'js/bootstrap.bundle.min.js')}}'"></script>
-
-
-    <!-- </div> -->
-</body>
-
-</html>
+{% endblock %}

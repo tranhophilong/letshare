@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename ='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/style_login_signup.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+    {% block title %}{% endblock %}
+
+</head>
+<body>
+    <div class="main container">
+        <div class="row">
+            <div class="col-6">
+                <a href="#" class="navbar-brand" id="logo">Let Share</a>
+                <p id="slogan">Ứng dụng giúp mọi người chia sẽ đồ</p>
+
+            </div>
+
+            {% block main_content %}{% endblock %}
+        </div>
+    </div>
+
+    <script type="module" src="{{url_for('static', filename = 'js/signupscript.js')}}"></script>
+    <script type="'module" src="{{url_for('static', filename = 'js/bootstrap.bundle.min.js')}}'"></script>
+    <script type="module" src = "{{url_for('static', filename = 'js/loginscript.js')}}"></script>
+</body>
+</html>

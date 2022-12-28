@@ -40,7 +40,8 @@ def signup ():
             error = f"Email {email} is already registered."
             print(error)
         else:
-            return redirect(url_for('auth.login'))
+            # return redirect(url_for('auth.login'))
+            return jsonify({'redirec':url_for('auth.login')})
         flash(error)
 
     return render_template('auth/signup.html')
@@ -52,7 +53,6 @@ def login():
     if request.method == 'POST':
         error = None 
         user_req = request.get_json()
-        print(user_req)
         db = get_db()
         email = user_req['email']
         password = user_req['password']
@@ -61,12 +61,14 @@ def login():
         ).fetchone()
         if user_db is None:
             error = 'Incorrect email'
-        elif not check_password_hash(user_db['password'], password):
+        elif not check_password_hash(user_db['password_user'], password):
             error = 'Incorrect password'
         if error is None:
             session.clear()
             session['user_id'] = user_db['id']
-            return redirect(url_for('index'))
+            # return redirect(url_for('index'))
+            print(session['user_id'])
+            return jsonify({'redirec':url_for('index')})
         flash(error)
     return render_template('auth/login.html')
 
@@ -80,6 +82,7 @@ def load_logged_in_user():
         g.user = get_db().execute(
             'SELECT * FROM user WHERE id = ?', (user_id,)
         ).fetchone()
+        
 @bp.route('/logout')
 def logout():
     session.clear()

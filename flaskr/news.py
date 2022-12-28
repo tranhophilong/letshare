@@ -6,13 +6,13 @@ from werkzeug.exceptions import abort
 from flaskr.auth import login_required
 from flaskr.db import get_db
 
-bp = Blueprint('news', __name__,url_prefix='/news')
+bp = Blueprint('news', __name__)
 
 
-@bp.route('/index')
+@bp.route('/')
 def index():
     db = get_db()
-    posts = db
+    
 
     return render_template('news/index.html')
 
